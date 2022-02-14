@@ -6,29 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--    <Button-->
-<!--        android:id="@+id/button"-->
-<!--        android:layout_width="145dp"-->
-<!--        android:layout_height="65dp"-->
-<!--        android:layout_alignParentStart="true"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginStart="117dp"-->
-<!--        android:layout_marginTop="481dp"-->
-<!--        android:layout_marginEnd="149dp"-->
-<!--        android:layout_marginBottom="185dp"-->
-<!--        android:onClick="displayToastMsg"-->
-<!--        android:text="@string/about_me"-->
-<!--        android:visibility="visible"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="1.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textView"-->
-<!--        app:layout_constraintVertical_bias="0.0" />-->
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -48,7 +25,7 @@
         app:layout_constraintVertical_bias="0.499" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/aboutMe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -56,8 +33,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="156dp"
         android:layout_marginBottom="380dp"
-        android:onClick="displayToastMsg"
         android:text="@string/about_me_string" />
+<!--        android:onClick="displayToastMsg"-->
+
 
     <Button
         android:id="@+id/button2"
@@ -80,5 +58,14 @@
         app:layout_constraintVertical_bias="0.403"
         tools:ignore="TextContrastCheck" />
 
+    <Button
+        android:id="@+id/linkCollector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="105dp"
+        android:text="Link Collector" />
 
 </RelativeLayout>

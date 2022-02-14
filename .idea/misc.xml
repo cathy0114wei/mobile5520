@@ -3,12 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_about_me.xml" value="0.17346014492753623" />
         <entry key="app/src/main/res/layout/activity_clicky.xml" value="0.24328454554644532" />
         <entry key="app/src/main/res/layout/activity_clicky_clicky.xml" value="0.32812781956585857" />
+        <entry key="app/src/main/res/layout/activity_link_collector.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19055552602690606" />
         <entry key="app/src/main/res/layout/content_clicky_clicky.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.15489130434782608" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.3217314239836351" />
+        <entry key="app/src/main/res/layout/item_card.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/layout_dialog.xml" value="0.200777388746363" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.18958333333333333" />
       </map>
     </option>
@@ -18,5 +22,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.3362225859215996" />
+      </ProjectState>
+    </option>
   </component>
 </project>
