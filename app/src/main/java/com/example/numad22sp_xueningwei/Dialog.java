@@ -48,10 +48,6 @@ public class Dialog extends AppCompatDialogFragment {
 
         builder.setView(view)
                 .setTitle(addOrEdit)
-                .setNegativeButton("Delete", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {}
-                })
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
