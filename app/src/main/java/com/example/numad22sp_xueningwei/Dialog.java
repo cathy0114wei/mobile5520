@@ -17,7 +17,7 @@ public class Dialog extends AppCompatDialogFragment {
 
     private EditText editTextWebsite;
     private EditText editTextURL;
-//    private DialogListener listener;
+    private DialogListener listener;
 
     private ItemCard item;
     private int position;
