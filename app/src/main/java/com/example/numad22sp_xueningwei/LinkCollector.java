@@ -14,7 +14,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
-public class LinkCollector extends AppCompatActivity implements Dialog.DialogListener {
+public class LinkCollector extends AppCompatActivity  implements Dialog.DialogListener{
     private ArrayList<ItemCard> itemList = new ArrayList<>();
 
     //    private TextView textView;

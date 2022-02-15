@@ -17,7 +17,7 @@ public class Dialog extends AppCompatDialogFragment {
 
     private EditText editTextWebsite;
     private EditText editTextURL;
-    private DialogListener listener;
+//    private DialogListener listener;
 
     private ItemCard item;
     private int position;
@@ -44,6 +44,7 @@ public class Dialog extends AppCompatDialogFragment {
             addOrEdit ="Edit this item";
             editTextWebsite.setText(item.getName());
             editTextURL.setText(item.getURL());
+
         }
 
         builder.setView(view)
