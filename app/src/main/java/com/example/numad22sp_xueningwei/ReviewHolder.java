@@ -15,7 +15,6 @@ import com.google.android.material.snackbar.Snackbar;
 public class ReviewHolder extends RecyclerView.ViewHolder {
     public TextView itemName;
     public TextView itemURL;
-    //为什么用context？？？？
     public ReviewHolder(Context context, View itemView, final ItemClickListener listener){
         super(itemView);
         itemURL = itemView.findViewById(R.id.URL);
@@ -39,7 +38,6 @@ public class ReviewHolder extends RecyclerView.ViewHolder {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(itemURL.getText().toString()));
                     context.startActivity(intent);
                 } else {
-                    //不确定是不是view，瞎写的
                     Snackbar snackbar = Snackbar.make(
                             view, "Invalid URL, plz change", Snackbar.LENGTH_LONG);
                     snackbar.show();

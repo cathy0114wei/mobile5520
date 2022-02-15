@@ -5,10 +5,13 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.webkit.URLUtil;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDialogFragment;
+
+import com.google.android.material.snackbar.Snackbar;
 
 public class Dialog extends AppCompatDialogFragment {
     public interface DialogListener {
@@ -54,7 +57,13 @@ public class Dialog extends AppCompatDialogFragment {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         String webSite = editTextWebsite.getText().toString();
                         String URL = editTextURL.getText().toString();
-                        listener.transferInfo(position, webSite, URL);
+                        if(!URLUtil.isValidUrl(URL)){
+                            Snackbar snackbar = Snackbar.make(
+                                    view, "Invalid URL, plz change", Snackbar.LENGTH_LONG);
+                            snackbar.show();
+                        } else {
+                            listener.transferInfo(position, webSite, URL);
+                        }
                     }
                 });
         return builder.create();
