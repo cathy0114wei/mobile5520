@@ -57,13 +57,13 @@ public class Dialog extends AppCompatDialogFragment {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         String webSite = editTextWebsite.getText().toString();
                         String URL = editTextURL.getText().toString();
-                        if(!URLUtil.isValidUrl(URL)){
-                            Snackbar snackbar = Snackbar.make(
-                                    view, "Invalid URL, plz change", Snackbar.LENGTH_LONG);
-                            snackbar.show();
-                        } else {
+//                        if(!URLUtil.isValidUrl(URL)){
+//                            Snackbar snackbar = Snackbar.make(
+//                                    view, "Invalid URL, plz change", Snackbar.LENGTH_LONG);
+//                            snackbar.show();
+//                        } else {
                             listener.transferInfo(position, webSite, URL);
-                        }
+//                        }
                     }
                 });
         return builder.create();

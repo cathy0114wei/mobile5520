@@ -140,7 +140,6 @@ public class LinkCollector extends AppCompatActivity  implements Dialog.DialogLi
 
     private void addItem(String website, String URL) {
         itemList.add(0, new ItemCard(website, URL));
-//        Toast.makeText(LinkCollector.this, "Add an item", Toast.LENGTH_SHORT).show();
         Snackbar snackbar = Snackbar.make(recyclerView, "add Item", Snackbar.LENGTH_LONG);
         snackbar.show();
         reviewAdapter.notifyItemInserted(0);
