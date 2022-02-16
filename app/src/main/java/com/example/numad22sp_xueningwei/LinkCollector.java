@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.URLUtil;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -139,10 +140,17 @@ public class LinkCollector extends AppCompatActivity  implements Dialog.DialogLi
 
 
     private void addItem(String website, String URL) {
-        itemList.add(0, new ItemCard(website, URL));
-        Snackbar snackbar = Snackbar.make(recyclerView, "add Item", Snackbar.LENGTH_LONG);
-        snackbar.show();
-        reviewAdapter.notifyItemInserted(0);
+        if(!URLUtil.isValidUrl(URL)){
+            Snackbar snackbar = Snackbar.make(
+                    recyclerView, "Invalid URL, plz change", Snackbar.LENGTH_LONG);
+            snackbar.show();
+        } else {
+            itemList.add(0, new ItemCard(website, URL));
+            Snackbar snackbar = Snackbar.make(recyclerView, "add Item", Snackbar.LENGTH_SHORT);
+            snackbar.show();
+            reviewAdapter.notifyItemInserted(0);
+        }
+
     }
 
     private void editItem(int position, String website, String url) {
