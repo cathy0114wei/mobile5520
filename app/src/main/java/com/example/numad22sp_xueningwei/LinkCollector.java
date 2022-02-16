@@ -15,7 +15,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
-public class LinkCollector extends AppCompatActivity  implements Dialog.DialogListener{
+public class LinkCollector extends AppCompatActivity implements Dialog.DialogListener{
     private ArrayList<ItemCard> itemList = new ArrayList<>();
 
     //    private TextView textView;
@@ -123,7 +123,7 @@ public class LinkCollector extends AppCompatActivity  implements Dialog.DialogLi
             public void onItemClick(int position) {
                 //attributions bond to the item has been changed
                 itemList.get(position).onItemClick(position);
-                openDialog(itemList.get(position), position);
+//                openDialog(itemList.get(position), position);
                 reviewAdapter.notifyItemChanged(position);
             }
 
@@ -153,21 +153,22 @@ public class LinkCollector extends AppCompatActivity  implements Dialog.DialogLi
 
     }
 
-    private void editItem(int position, String website, String url) {
-        itemList.get(position).setName(website);
-        itemList.get(position).setURL(url);
-        reviewAdapter.notifyItemChanged(position);
-        Snackbar snackbar = Snackbar.make(recyclerView, "edit Item successfully", Snackbar.LENGTH_LONG);
-        snackbar.show();
-    }
+    //some functions which I would like to implement but assignment didn't mention
+//    private void editItem(int position, String website, String url) {
+//        itemList.get(position).setName(website);
+//        itemList.get(position).setURL(url);
+//        reviewAdapter.notifyItemChanged(position);
+//        Snackbar snackbar = Snackbar.make(recyclerView, "edit Item successfully", Snackbar.LENGTH_LONG);
+//        snackbar.show();
+//    }
 
     @Override
     public void transferInfo(int position, String webName, String URL){
-        if(position == -1){
+//        if(position == -1){
             addItem(webName, URL);
-        } else {
-            editItem(position, webName, URL);
-        }
+//        } else {
+//            editItem(position, webName, URL);
+//        }
     }
 
 }

@@ -25,5 +25,5 @@
     <string name="pressed">Pressed:-</string>
     <string name="item_name">Website:</string>
     <string name="URL">Enter website URL (starting with https://)</string>
-    <string name="tips">Tap website to edit website name, and tap URL to edit URL</string>
+    <string name="tips">swap the item to delete!</string>
 </resources>
