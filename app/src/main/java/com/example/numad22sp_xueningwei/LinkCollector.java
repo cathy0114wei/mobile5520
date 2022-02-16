@@ -128,6 +128,7 @@ public class LinkCollector extends AppCompatActivity implements Dialog.DialogLis
             }
 
 
+
         };
         reviewAdapter.setOnItemClickListener(itemClickListener);
 
