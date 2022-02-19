@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private Button clickyClicky;
     private Button linkCollector;
     private Button aboutMe;
+    private Button locator;
 
 //    public void toastMsg(String msg){
 //        Toast toast = Toast.makeText(this, msg, Toast.LENGTH_LONG);
@@ -24,14 +25,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        clickyClicky = (Button)findViewById(R.id.button2);
+
+        clickyClicky = (Button)findViewById(R.id.click);
         clickyClicky.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                openActivity2();
-
-            }
+            public void onClick(View view) { openActivity2(); }
         });
+
         linkCollector = (Button) findViewById(R.id.linkCollector);
         linkCollector.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,11 +39,20 @@ public class MainActivity extends AppCompatActivity {
                 openActivity3();
             }
         });
+
         aboutMe = (Button) findViewById(R.id.aboutMe);
         aboutMe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openActivity4();
+            }
+        });
+
+        locator = (Button) findViewById(R.id.locator);
+        locator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity5();
             }
         });
     }
@@ -57,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openActivity4(){
         Intent intent = new Intent(this, AboutMe.class);
+        startActivity(intent);
+    }
+    public void openActivity5(){
+        Intent intent = new Intent(this,Locator.class);
         startActivity(intent);
     }
 
