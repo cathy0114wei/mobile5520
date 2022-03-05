@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.numad22sp_xueningwei">
+
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_xn"
@@ -12,9 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NUMAD22Sp_XueningWei">
         <activity
+            android:name=".WebService"
+            android:exported="false" />
+        <activity
             android:name=".Locator"
-            android:exported="false"
-            />
+            android:exported="false" />
         <activity
             android:name=".AboutMe"
             android:exported="false" />

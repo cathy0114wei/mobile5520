@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private Button linkCollector;
     private Button aboutMe;
     private Button locator;
+    private Button web;
 
 //    public void toastMsg(String msg){
 //        Toast toast = Toast.makeText(this, msg, Toast.LENGTH_LONG);
@@ -55,6 +56,14 @@ public class MainActivity extends AppCompatActivity {
                 openActivity5();
             }
         });
+
+        web = (Button) findViewById(R.id.webService);
+        web.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity6();
+            }
+        });
     }
     public void openActivity2(){
         Intent intent = new Intent(this, ClickyActivity.class);
@@ -70,6 +79,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openActivity5(){
         Intent intent = new Intent(this,Locator.class);
+        startActivity(intent);
+    }
+    public void openActivity6(){
+        Intent intent = new Intent(this,WebService.class);
         startActivity(intent);
     }
 
