@@ -32,5 +32,6 @@
     <string name="locator">Locator</string>
     <string name="webservice">webService</string>
     <string name="web_go">Go!</string>
-    <string name="web_search_reminder">Search your meal here:</string>
+    <string name="web_search_reminder">Search your meal name here and get instructions!</string>
+    <string name="arrabiata">Arrabiata</string>
 </resources>
