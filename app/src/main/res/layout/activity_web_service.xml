@@ -6,4 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".WebService">
 
+    <Button
+        android:id="@+id/fetch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/web_go"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="81dp" />
+
+    <TextView
+        android:id="@+id/result_view"
+        android:layout_width="433dp"
+        android:layout_height="231dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.322"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/search_reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/web_search_reminder"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="20dp"
+        android:singleLine="false"/>
+
+    <EditText
+        android:id="@+id/enter_search"
+        android:layout_width="280dp"
+        android:layout_height="26dp"
+        android:background="@color/teal_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="39dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
