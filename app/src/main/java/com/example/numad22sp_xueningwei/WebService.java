@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +27,7 @@ public class WebService extends AppCompatActivity {
     private static final String TAG = "WebServiceActivity";
     private EditText editText;
     private Button button;
+    private ProgressBar progressBar;
     private static final String subHead = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,8 @@ public class WebService extends AppCompatActivity {
 
         editText = (EditText) findViewById(R.id.enter_search);
         button = (Button) findViewById(R.id.fetch);
+        progressBar = (ProgressBar) findViewById(R.id.indeterminateBar);
+        progressBar.setMax(100);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,12 +57,21 @@ public class WebService extends AppCompatActivity {
         }
     }
     private class PingWebServiceTask  extends AsyncTask<String, Integer, JSONObject> {
-
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            progressBar.setVisibility(View.VISIBLE);
+            progressBar.setProgress(0);
+        }
         @Override
         protected void onProgressUpdate(Integer... values) {
-            Toast.makeText(WebService.this, "onProgressUpdate", Toast.LENGTH_SHORT).show();
-            Log.i(TAG, "Making progress...");
+            super.onProgressUpdate(values);
+            //Toast.makeText(WebService.this, "onProgressUpdate", Toast.LENGTH_SHORT).show();
+            //Log.i(TAG, "Making progress...******************************************");
+            progressBar.setProgress(values[0], true);
+
         }
+
 
         @Override
         protected JSONObject doInBackground(String... params) {
@@ -68,13 +81,15 @@ public class WebService extends AppCompatActivity {
                 URL url = new URL(params[0]);
 
                 String resp = NetworkUtil.httpResponse(url);
-                Log.i(resp,"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+                //Log.i(resp,"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 
                 JSONObject jObject = new JSONObject(resp);
                 JSONArray jArray = jObject.getJSONArray("meals");
                 resObject = jArray.getJSONObject(0);
+                for(int i = 0; i < params.length; i++){
+                    publishProgress(100-i);
+                }
                 return resObject;
-
             } catch (MalformedURLException e) {
                 Log.e(TAG,"MalformedURLException");
                 e.printStackTrace();

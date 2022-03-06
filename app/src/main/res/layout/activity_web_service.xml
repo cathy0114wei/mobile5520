@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".WebService">
 
+    <ProgressBar
+        android:id="@+id/indeterminateBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="399dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="116dp" />
+
     <Button
         android:id="@+id/fetch"
         android:layout_width="wrap_content"
@@ -39,9 +49,10 @@
         android:text="@string/web_search_reminder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12"
+        app:layout_constraintVertical_bias="0.097"
         tools:ignore="MissingConstraints" />
 
     <EditText
