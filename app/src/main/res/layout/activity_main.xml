@@ -35,7 +35,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="148dp"
-        android:layout_marginBottom="565dp"
+        android:layout_marginBottom="35dp"
         android:text="@string/about_me_string" />
 
     <Button
@@ -57,8 +57,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginEnd="125dp"
-        android:layout_marginBottom="402dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="414dp"
         android:text="@string/link_collector" />
 
     <Button
